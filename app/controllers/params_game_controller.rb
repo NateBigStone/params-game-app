@@ -10,6 +10,9 @@ class ParamsGameController < ApplicationController
 
   end
   def form_send
-    
+    @name_message = "Your name is: " + params[:form_message].upcase
+    if params[:form_message][0].downcase == "a"
+      @other_message = "Hey your name starts with the first letter of the alphabet!"
+     end
   end
 end
